@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw05ig0q5vkdp"]
+
+[ext_resource type="Script" path="res://FileList.gd" id="1_mkod4"]
+
+[node name="FileList" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mkod4")
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+hide_root = true
+
+[connection signal="item_activated" from="Tree" to="." method="_on_tree_item_activated"]
